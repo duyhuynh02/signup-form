@@ -6,20 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Signup Form</title>
+    <script>
+        function check() {
+            if(document.getElementById('password').value === 
+                document.getElementById('confirmedPassword').value) {
+                    alert("It's matched!")
+            } else {
+                alert("It's not the same password!")
+            }
+        }
+
+    </script>
 </head>
 <body>
-    <h1>The Signup Form Page</h1>
     <div class="form">
+        <!-- Left banner -->
         <div class="left-banner">
             <img class="banner" src="images/binit-sharma-BiZb01CW0RE-unsplash.jpg" alt="Forrest" width="400" height="600">
             <div class="banner-logo">
                 <img class="logo" src="images/odin-lined.png" alt="odin-logo" width="40" height="50">ODIN
             </div>
-            <p class="author">Photo by Binit Sharma</p>
+            <p class="author">Photo by Binit Sharma on Unsplash</p>
         </div>
 
         <!-- Taking care of the singup form later. -->
-        <div class="actual-form"></div>
+        <div class="actual-form">
+
+            <!-- Quotes -->
+            <div class="quotes">
+                <p>This is not a real online service! 
+                    You know you need something like this in your life to help you 
+                    realize your deepest dreams.</p>
+                <p>Signup now you get started.</p>
+                <p>You know you want to.</p>
+            </div>
+
+            <div class="quotes">Let's do this!</div>
+
+            <!-- Posting form -->
+            <div class="post-form">
+
+                <!-- Left post form -->
+                <div class="left-post-form">
+                    <!-- First Name -->
+                    <form action="#" method="post">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Michael" name="first_name" minlength="5" maxlength="20" required>
+                    </form>
+                    <!-- Email -->
+                    <form action="#" method="post">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@mail.com" name="email" required>
+                    </form>  
+                    <!-- Password -->
+                    <form action="#" method="post">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </form>  
+                </div>
+
+
+                <!-- Right post form  -->
+                <div class="right-post-form">
+                    <!-- Last Name -->
+                    <form action="#" method="post">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Scofield" name="last_name" minlength="5" maxlength="20" required>
+                    </form>
+                    <!-- Phone number -->
+                    <form action="#" method="post">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="(\d\d\d)-(\d\d\d)-(\d\d\d\d)" required title="Please enter a valid phone number, example: 123-456-7890">
+                    </form>  
+                    <!-- Confirm Password -->
+                    <form action="#" method="post">
+                        <label for="confirmedPassword">Confirmed Password</label>
+                        <input type="password" id="confirmedPassword" name="confirmedPassword" onchange="check()" required/> 
+                    </form>     
+                </div>             
+
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Create account</button>
+                <p>Already have an account? <span><a href="#">Log in</a></span></p>
+            </div>
+
+
+        </div>
 
     </div>
 

@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 @font-face {
     font-family: 'norsebold';
@@ -9,6 +9,10 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+:root {
+    font-family: 'norsebold', sans-serif;
 }
 
 .form {
@@ -26,13 +30,82 @@
     top: 16rem;
     text-align: center;
     font-size: 3.4em;
-    font-family: 'norsebold', sans-serif;
 }
 
 .author {
     position: absolute; 
     width: 29.5%;
-    bottom: 0.5rem;
+    top: 36rem;
     text-align: center;
     color: white;
 }
+
+.actual-form {
+    background-color: rgb(237, 240, 241);
+}
+
+
+
+.quotes {
+    width: 60%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 16px;
+}
+
+
+.post-form {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+}
+
+.left-post-form, .right-post-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+label, input {
+    display: block;
+    margin: 2px;
+}
+
+input {
+    border: 2px solid #E5E7EB;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+:not(input[type="password"]):focus {
+    outline: none;
+    border-color: lightblue;
+    box-shadow: 0 0 2px #665df5;
+}
+
+input[type="password"]:invalid {
+    border-color: red;    
+}
+
+.submit-button {
+    padding: 32px;
+}
+
+button[type="submit"] {
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #596D48;
+    font-weight: 800;
+    color: white;
+}
+
+input[required]{
+    background-image: radial-gradient(#F00 15%, transparent 16%), radial-gradient(#F00 15%, transparent 16%);
+    background-size: 1em 1em;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+
